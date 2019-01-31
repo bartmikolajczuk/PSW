@@ -1,0 +1,71 @@
+.container {
+  margin-left: 10%;
+  margin-right: 40% !important;
+  border-top: solid 1px #d2d2d2;
+  border-bottom: solid 1px #d2d2d2;
+}
+.cartItem {
+  display: flex;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-color: #d2d2d2 !important;
+  font-size: small;
+}
+.btn-default{
+  background-image: none !important;
+}
+.imgUrl {
+  max-width: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.name {
+  margin-left: 20px;
+  flex-grow: 3;
+  flex-basis: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.price {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.color {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.size {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.removeButton {
+   margin-top: auto;
+   margin-bottom: auto;
+   background: #d2d2d2;
+   color: white;
+   text-shadow: black;
+   align-content: center;
+   font-weight: 900 !important;
+   border-radius: 2px;
+   -webkit-transition: background 0.2s;
+   transition: background 0.2s;
+   padding: 6px 15px;
+   text-align: center;
+   font-size: 10px;
+   text-shadow: -0.1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -0.1px black;
+   letter-spacing: 0.5px;
+ }
+
+.removeButton:hover {
+  margin-top: auto;
+  margin-bottom: auto;
+  background: #ffd3e1;
+  color: white;
+  padding: 6px 15px;
+}
+

@@ -1,0 +1,192 @@
+@font-face {
+  src: url('https://fonts.googleapis.com/css?family=Pattaya');
+  font-family: 'Pattaya', sans-serif;
+}
+
+.shippingForm {
+  background-image: url("https://raw.githubusercontent.com/snwh/paper-icon-theme/master/Paper/512x512/categories/preferences-system-power.png"), url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png");
+  background-repeat: repeat, repeat;
+  background-position: center;
+  background-color: white ;
+  background-size: 50px;
+
+}
+.nested {
+  background-color: hsl(0, 100%, 100%);
+  background-image: url("https://raw.githubusercontent.com/snwh/paper-icon-theme/master/Paper/512x512/categories/preferences-system-power.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  border: 2px solid #ffd3e1;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 30px;
+  box-shadow: 5px 10px;
+  padding: 25px;
+  background-origin: content-box;
+}
+.nested2 {
+  font-family: 'Pattaya', sans-serif;
+  background: white;
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image-source: url(https://raw.githubusercontent.com/snwh/paper-icon-theme/master/Paper/512x512/categories/preferences-system-power.png);
+  border-image-slice: 20%;
+  border-image-repeat: repeat;
+}
+.nested2:hover {
+  transform: scaleX(1.5);
+}
+
+.moving {
+  width: 100px;
+  height: 100px;
+  background: #737373;
+  position: relative;
+  animation: mymove 5s infinite;
+  transition: width 2s;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 90%;}
+}
+.transforming {
+  width: 100px;
+  height: 100px;
+  background: #737373;
+  position: relative;
+  margin-left: 50%;
+  transition: width 2s;
+}
+.transforming:hover {
+  width: 300px;
+  height: 300px;
+}
+p:not([value*="pa"]) {
+  background-color: #ffd3e1;
+  text-shadow: 2px 2px black;
+  font-size: x-large;
+}
+div > p {
+  background-color: yellow;
+}
+h1 {
+  text-align: center;
+  color: #222;
+}
+
+h2 {
+  text-align: center;
+  color: #222;
+}
+div {
+    text-align: center;
+  }
+
+p {
+  max-width: 500px;
+  margin: 10px auto;
+}
+button {
+  margin: 5px;
+}
+
+.coinsLabel{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+form {
+  background-color: white;
+  max-width: 500px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  position: relative;
+}
+
+label {
+  color: #333;
+  width: 110px;
+  min-width: 60px;
+  font-size: 1.1em;
+  line-height: 32px;
+  font-weight: 600;
+}
+input, textarea {
+  flex: 1;
+  padding: 3px 5px;
+  font-size: 1em;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.countrySelect {
+  flex: 1;
+  padding: 3px 5px;
+  font-size: 1em;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 158px;
+}
+span {
+    line-height: 32px;
+    margin-left: 10px;
+    color: #800;
+    font-weight: bold;
+  }
+
+pre {
+  margin-top: 5px;
+  text-align: left;
+  position: relative;
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+
+.action__button {
+  text-shadow: -0.15px 0 black, 0 0.15px black, 0.15px 0 black, 0 -0.15px black;
+  margin-bottom: 10px;
+  letter-spacing: 0.7px;
+  padding: 6px 15px;
+  font-weight: 900 !important;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 10px;
+  background: #d2d2d2;
+  color: white;
+  text-shadow: black;
+  align-content: center;
+  border-radius: 2px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.action__button:hover {
+  background: #ffd3e1;
+  color: #fafafa !important;
+  border-color: #d2d2d2;
+  padding: 6px 15px;
+}
+
+.action__button:active {
+  text-shadow: -0.1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -0.1px black !important;
+  background: #ffd3e1;
+  color: #8d8d8d !important;
+  border-color: #ffd3e1;
+  padding: 6px 15px;
+}
+
+.action__button.launch {
+  text-shadow: -0.1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -0.1px black !important;
+  background: #ffd3e1;
+  color: white !important;
+  border-color: #ffd3e1;
+  padding: 6px 15px;
+}

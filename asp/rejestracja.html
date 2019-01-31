@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="pl-PL">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Rejestracja </title>
+
+	<style>
+	body {
+  	margin:0;
+    padding:0;
+  	height:100%;
+  	background-image: url("images/rejestracjaMapa.jpg");
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+		 background-size: cover;
+		 font-family: 'Lato', sans-serif;
+	}
+	
+	#show-hide{
+		display: none;
+	}
+		</style>
+
+
+<script type="text/javascript">
+
+	function showHideElement() {
+		var header = document.getElementById("show-hide");
+
+		if(header.style.display === "block") {
+			header.style.display = "none";
+		} else {
+			header.style.display = "block";
+		}
+	}
+</script>
+
+</head>
+<style>
+ * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #bbb;
+        }
+        #izMniejsze {
+            width: 50%;
+        }
+
+        table, td, th {
+            border: 1px solid gray
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navbar a {
+
+            color: #f2f2f2;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:active{
+            color: #f27283;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background-color: #efefef;
+            text-align: center;
+        }
+</style>
+
+<body>
+    <nav class="navbar">
+        <a class="active" href="index.html">Strona główna</a>
+        <a href="rejestracja.aspx">Rejestracja</a>
+        <a href="mojeKonto.html">Moje konto</a>
+    </nav>
+	
+
+	<div id="content">
+		<form id="myForm" method="POST" action="" autocomplete="on">
+
+			<div>
+				<label class="fixed" for="name" > Imię:
+					<input id="name" type="text" name="fname" autofocus /> (Jan)
+				</label>
+			</div>
+
+			<div>
+				<label class="fixed" for="surname"> Nazwisko:
+					<input id="surname" type="text" name="lname" required /> (Kowalski)
+				</label>
+			</div>
+
+			<div>
+				<label class="fixed" for="month"> Miesiąc urodzin:
+					<input id="month" list="months" name="month"> (maj)
+					<datalist id="months">
+						<option value="styczeń"></option>
+						<option value="luty"></option>
+						<option value="marzec"></option>
+						<option value="kwiecień"></option>
+						<option value="maj"></option>
+						<option value="czerwiec"></option>
+						<option value="lipiec"></option>
+						<option value="sierpień"></option>
+						<option value="wrzesień"></option>
+						<option value="październik"></option>
+						<option value="listopad"></option>
+						<option value="grudzień"></option>
+
+					</datalist>
+				</label>
+			</div>
+
+			<div>
+				<label class="fixed" for="year"> Rok urodzin:
+					<input id="year" type="number" name="birth-year" /> (1983)
+				</label>
+			</div>
+
+			<div>
+				<label>E-mail:
+					<input id="email" type="email" name="email" required /> (imie@domena.pl)
+				</label>
+			</div>
+
+			<div>
+				<label class="fixed" for="phone">Telefon:
+					<input id="phone" type="tel" name="telephone" pattern="\d{3}-\d{3}-\d{3}" /> (000-000-000)
+				</label>
+			</div>
+
+			<div>
+				<input id="submit" onclick="showHideElement()"  style="font-size: 25px" type="submit" name="send" value="zarejestruj"/>
+				<input id="reset" style="font-size: 25px"  type="reset" value="zresetuj"/>
+			</div>
+
+			
+			<p style="color:chartreuse" id = "helpText"></p>		
+			
+
+		</form>
+
+		
+
+	</div>
+</body>

@@ -1,0 +1,24 @@
+table, th, td {
+    border: 2px #101010 solid;
+}
+
+th{
+    text-align: center;
+}
+table {
+    margin: 20px auto;
+    width: 80% !important;
+}
+
+form {
+    display: inline-block;
+}
+
+#inner {
+    width: 60%;
+    margin: 40px auto;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}

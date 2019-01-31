@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="pl-PL">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Moje konto </title>
+
+
+
+	<style>
+		body {
+			background-color: azure;
+
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 			font-size: 18px;
+			margin: 0;
+		}
+
+		#content {
+			margin-left: 20pt;
+			
+		}
+		
+		#content div {
+			margin-bottom: 45px;
+			display: block;
+			text-shadow: 4px 4px 5px grey;
+		}
+	
+		h2 {
+			margin: 0;
+		}
+
+		#footer {
+  		position:static;
+  		bottom:0;
+  		width:100%;
+		}
+	</style>
+
+	<script>
+		document.addEventListener("click", function () {
+			document.getElementById("hide-add").innerHTML = "Lubisz tanio podróżować? kliknij i sprawdź!";
+		});
+	</script>
+</head>
+<style>
+ * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #bbb;
+        }
+        #izMniejsze {
+            width: 50%;
+        }
+
+        table, td, th {
+            border: 1px solid gray
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navbar a {
+
+            color: #f2f2f2;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:active{
+            color: #f27283;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background-color: #efefef;
+            text-align: center;
+        }
+</style>
+
+<body>
+    <nav class="navbar">
+        <a class="active" href="index.html">Strona główna</a>
+        <a href="rejestracja.aspx">Rejestracja</a>
+        <a href="mojeKonto.html">Moje konto</a>
+    </nav>
+	
+
+	<div id="content">
+		<h2 style="margin-bottom: 20px">Twoje dane</h2>
+		<form method="POST" action="http://deitel.com/" autocomplete="on">
+
+			<div>
+				<label> Imię:
+					<input type="text" name="fname" placeholder="Jan" autofocus />
+				</label>
+			</div>
+
+			<div>
+				<label> Nazwisko:
+					<input type="text" name="lname" placeholder="Kowalski" required />
+				</label>
+			</div>
+
+			<div>
+				<label> Twój ulubiony kolor:</label>
+				<input type="color">
+			</div>
+
+			<div>
+				<label>Twoje urodziny:
+					<input type="month">
+				</label>
+			</div>
+
+
+			<div>
+				<input type="submit" name="send" value="wyślij" />
+			</div>
+		</form>
+
+
+		<div>
+			<p><b>Zmiany wyglądu: </b></p>
+			<p>shift + lpm = kolor fontu </p>
+			<p>alt + lpm = kolor tła </p>
+			<p>ctrl + lpm = wielkość fontu </p>
+			<p>lpm = wartości domyślne </p>
+			<label> Kliknij i zmień:
+				<input type="button" name="bck-clr" value="zmień" onclick="changeBackgroundColor(event);" />
+			</label>
+		</div>
+
+		<p><b>Zmiana fonut: </b></p>
+		<select style="margin-bottom: 20px" id="input-font" class="input" onchange="changeFont (this);">
+			<option value="Times New Roman" selected="selected">Times New Roman</option>
+			<option value="Courier New">Courier New</option>
+			<option value="Verdana">Verdana</option>
+			<option value="Gill Sans">Gill Sans</option>
+		</select>
+	</div>
+</body>

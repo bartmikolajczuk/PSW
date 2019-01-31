@@ -1,0 +1,22 @@
+{
+  "short_name": "Cop it easy",
+  "name": "Cop it easy",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "React Ext"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+      "16": "icon.png",
+      "19": "icon.png",
+      "38": "icon.png",
+      "64": "icon.png",
+      "128": "icon.png"
+  },
+  "version": "1.0"
+}

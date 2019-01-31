@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--komentarz-->
+
+
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/sugestieFormularz.css" />
+    <script type="text/javascript" src="scripts/sugestieFormularz.js"></script>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["question"]["name"].value;
+            if (name == "") {
+                alert("Zapomniałeś o imieniu ;)");
+                return false;
+            }
+            else if (ValidCaptcha() == false) {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body onload="Captcha();">
+    <nav id="menu">
+        <a href="index.html">Strona główna</a>
+        <a href="rejestracja.html"><mark>Rejestracja</mark></a>
+        <a href="mojeKonto.html">Moje konto</a>
+        <div id="google-search-menu">
+            <form action="index.html">
+                Szukaj w Google: <input type="search"> <input type="submit" value="szukaj">
+            </form>
+        </div>
+    </nav>
+
+
+    <div id="content">
+        <div style="clear:both;">
+            <p><b>Masz jakieś pytanie albo sugestie? Śmiało do nas napisz ;) </b></p>
+            <form onsubmit="return validateForm()" name="question" method="POST" action="dziekujemy.html">
+                <input type="hidden" name="reciever" value="randomowyemail@gmail.com">
+                <input type="hidden" name="subject" value="feedback">
+                <input type="hidden" name="redirect" value="main.html">
+                <p><label>Imię:<br>
+                        <input id="f-name" name="name" type="text" size="30" maxlength="30">
+                    </label>
+                </p>
+                <p><label>
+                        <textarea name="questions" rows="6" cols="70">Zadaj pytanie</textarea>
+                    </label>
+                </p>
+
+                <p>Jesteś robotem?</p>
+                <div class="captcha"> 
+                    <h2 type="text" id="mainCaptcha"></h2>
+                    <p><input type="button" id="refresh" value="resetuj" onclick="Captcha();"/></p>
+                    <input type="text" id="txtInput"/>    
+                    <input id="check" type="button" value="sprawdź" onclick="ValidCaptcha();"/>
+                    </div>
+
+                <p>
+                    <input type="submit" value="wyślij">
+                    <input type="reset" value="wyczyść">
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
